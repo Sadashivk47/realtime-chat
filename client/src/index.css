@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0f1420;
+  color: #e8ebf2;
+}
+
+input,
+select,
+button {
+  font-family: inherit;
+  font-size: 14px;
+}

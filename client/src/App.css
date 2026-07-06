@@ -1,0 +1,227 @@
+:root {
+  --bg: #0f1420;
+  --panel: #171d2c;
+  --panel-2: #1e2536;
+  --accent: #4fd1c5;
+  --accent-dim: #2f6f68;
+  --text: #e8ebf2;
+  --text-dim: #8a92a6;
+  --border: #2a3247;
+}
+
+/* ---------- Join screen ---------- */
+.join-screen {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 20%, #1a2236 0%, var(--bg) 60%);
+}
+
+.join-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 40px;
+  width: 360px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.join-card h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.join-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.join-card label {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 10px;
+}
+
+.join-card input,
+.join-card select {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--text);
+  outline: none;
+}
+
+.join-card input:focus,
+.join-card select:focus {
+  border-color: var(--accent);
+}
+
+.join-card button {
+  margin-top: 20px;
+  background: var(--accent);
+  color: #06201d;
+  border: none;
+  border-radius: 8px;
+  padding: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.join-card button:hover {
+  background: #6fe0d5;
+}
+
+/* ---------- Chat screen ---------- */
+.chat-screen {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  background: var(--bg);
+}
+
+.rooms-panel {
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  padding: 20px 14px;
+}
+
+.rooms-panel h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin: 0 0 14px;
+}
+
+.rooms-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.room-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  padding: 9px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.room-btn:hover {
+  background: var(--panel-2);
+  color: var(--text);
+}
+
+.room-btn.active {
+  background: var(--accent-dim);
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.chat-header {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.you-are {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-msg {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.chat-user {
+  color: var(--accent);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.system-msg {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.typing-indicator {
+  min-height: 20px;
+  padding: 0 24px;
+  font-size: 12px;
+  color: var(--accent);
+}
+
+.composer {
+  display: flex;
+  gap: 10px;
+  padding: 16px 24px 20px;
+  border-top: 1px solid var(--border);
+}
+
+.composer input {
+  flex: 1;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--text);
+  outline: none;
+}
+
+.composer input:focus {
+  border-color: var(--accent);
+}
+
+.composer button {
+  background: var(--accent);
+  color: #06201d;
+  border: none;
+  border-radius: 8px;
+  padding: 0 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.composer button:hover {
+  background: #6fe0d5;
+}
